@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do Rosa</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#ec407a" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🌸 La mia To-Do Rosa 🌸</h1>
+    <div class="input-box">
+      <input type="text" id="taskInput" placeholder="Scrivi un compito..." />
+      <button onclick="addTask()">Aggiungi</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('✅ Service Worker registrato!'));
+    }
+  </script>
+</body>
+</html>
